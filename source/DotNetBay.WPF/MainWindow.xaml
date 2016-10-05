@@ -1,0 +1,44 @@
+﻿<Window x:Class="DotNetBay.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DotNetBay.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="630"
+        d:DataContext="{d:DesignInstance Type=local:MainWindow}">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- new auction button -->
+        <Button Grid.Row="1" Click="SellButtonClick" Padding="5" Margin="5,5,0,5" IsDefault="True">New Auction</Button>
+
+        <!-- auctions view -->
+        <DataGrid Name="AuctionsDataGrid" Grid.Row="2" ItemsSource="{Binding Auctions}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Auction" Binding="{Binding Path=Title}" />
+                <DataGridTextColumn Header="Status"/>
+                <DataGridTextColumn Header="Start Price" Binding="{Binding Path=StartPrice}" />
+                <DataGridTextColumn Header="Current Price" />
+                <DataGridTextColumn Header="Bids" />
+                <DataGridTextColumn Header="Starts" Binding="{Binding Path=StartDateTimeUtc, StringFormat=dd.MM.yyy HH:mm:ss}" />
+                <DataGridTextColumn Header="Ends" Binding="{Binding Path=EndDateTimeUtc, StringFormat=dd.MM.yyy HH:mm:ss}" />
+                <DataGridTextColumn Header="Seller" Binding="{Binding Path=Seller}" />
+                <DataGridTextColumn Header="Current Winner"/>
+                <DataGridTextColumn Header="Closed" />
+                <DataGridTextColumn Header="Winner" />
+                <DataGridTemplateColumn Header="Place Bid">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="PlaceBidButtonClick">Place</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
