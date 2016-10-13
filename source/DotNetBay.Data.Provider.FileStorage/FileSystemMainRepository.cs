@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Globalization;
 using System.IO;
-using Newtonsoft.Json;
 
 namespace DotNetBay.Data.Provider.FileStorage
 {

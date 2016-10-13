@@ -1,6 +1,4 @@
-﻿using DotNetBay.Core;
-using DotNetBay.Data.Entity;
-using System.Collections.ObjectModel;
+﻿using DotNetBay.Data.Entity;
 using System.Windows;
 
 namespace DotNetBay.WPF
@@ -17,7 +15,6 @@ namespace DotNetBay.WPF
             this.Auction = auction;
             this.DataContext = this;
             InitializeComponent();
-            this.DataContext = this;
         }
 
         private void CancelButtonClick(object sender, RoutedEventArgs e)

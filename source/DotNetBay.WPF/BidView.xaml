@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DotNetBay.WPF"
         mc:Ignorable="d"
-        Title="BidView" Height="300" Width="500" ResizeMode="NoResize"
-                d:DataContext="{d:DesignInstance Type=local:BidView}"
+        Title="BidView" 
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        d:DataContext="{d:DesignInstance Type=local:BidView}"
 >
     <Grid>
 
@@ -29,19 +31,21 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Label Grid.Column="0" Grid.Row="0" >Title</Label>
-            <Label Grid.Column="0" Grid.Row="1" >Description</Label>
-            <Label Grid.Column="0" Grid.Row="2" >Start Price</Label>
-            <Label Grid.Column="0" Grid.Row="3" >Current Price</Label>
-            <Label Grid.Column="0" Grid.Row="4" Margin="0, 20, 0, 0" FontWeight="Bold" >Your Bid</Label>
+            <Label Grid.Column="0" Grid.Row="2" >Description</Label>
+            <Label Grid.Column="0" Grid.Row="3" >Start Price</Label>
+            <Label Grid.Column="0" Grid.Row="4" >Current Price</Label>
+            <Label Grid.Column="0" Grid.Row="5" Margin="0, 20, 0, 0" FontWeight="Bold" >Your Bid</Label>
 
             <Label Grid.Column="1" Grid.Row="0" Content="{Binding Auction.Title}" ></Label>
-            <Label Grid.Column="1" Grid.Row="1" Content="{Binding Auction.Description}"></Label>
-            <Label Grid.Column="1" Grid.Row="2" Content="{Binding Auction.StartPrice}"></Label>
-            <Label Grid.Column="1" Grid.Row="3" Content="{Binding Auction.CurrentPrice}"></Label>
-            <TextBox Grid.Column="1" Grid.Row="4" Margin="0, 20, 0, 0">Your Bid</TextBox>
+            <Image Grid.Column="1" Grid.Row="1" Source="{Binding Auction.Image}" HorizontalAlignment="Left" MaxHeight="150" MaxWidth="170"></Image>
+            <Label Grid.Column="1" Grid.Row="2" Content="{Binding Auction.Description}"></Label>
+            <Label Grid.Column="1" Grid.Row="3" Content="{Binding Auction.StartPrice}"></Label>
+            <Label Grid.Column="1" Grid.Row="4" Content="{Binding Auction.CurrentPrice}"></Label>
+            <TextBox Grid.Column="1" Grid.Row="5" Margin="0, 20, 0, 0">Your Bid</TextBox>
         </Grid>
         <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Padding="5" Margin="5,5,0,5" IsDefault="True" HorizontalAlignment="Left" Click="PlaceBidButtonClick">Place Bid</Button>
