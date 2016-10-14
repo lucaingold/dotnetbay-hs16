@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7210F83D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBay.WPF", "DotNetBay.WPF\DotNetBay.WPF.csproj", "{192A66CD-9EDB-484F-9C22-F158B5944AE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBay.MVVM", "DotNetBay.MVVM\DotNetBay.MVVM.csproj", "{7DD0DCB7-E09F-45A0-A12E-7171EC8EEEB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBay.WPF.Test", "DotNetBay.WPF.Test\DotNetBay.WPF.Test.csproj", "{BB12B4FA-40A9-4DA7-BB33-1732E979FFFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{192A66CD-9EDB-484F-9C22-F158B5944AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{192A66CD-9EDB-484F-9C22-F158B5944AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{192A66CD-9EDB-484F-9C22-F158B5944AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD0DCB7-E09F-45A0-A12E-7171EC8EEEB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD0DCB7-E09F-45A0-A12E-7171EC8EEEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD0DCB7-E09F-45A0-A12E-7171EC8EEEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD0DCB7-E09F-45A0-A12E-7171EC8EEEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB12B4FA-40A9-4DA7-BB33-1732E979FFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB12B4FA-40A9-4DA7-BB33-1732E979FFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB12B4FA-40A9-4DA7-BB33-1732E979FFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB12B4FA-40A9-4DA7-BB33-1732E979FFFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
